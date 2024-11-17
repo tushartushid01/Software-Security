@@ -1,0 +1,14 @@
+service: aws-lambda-1
+
+provider:
+  name: aws
+  runtime: go1.x
+  region: us-east-1
+
+functions:
+  audiophile:
+    handler: bootstrap
+
+package:
+  individually: true
+  artifact: bootstrap.zip

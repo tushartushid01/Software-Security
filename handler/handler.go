@@ -18,6 +18,10 @@ var JwtKey = []byte("secret_key")
 
 var key = []byte("mysecretkeyaaaaa")
 
+//func LambdaHandler(req events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+//	return chiLambda.Proxy(req)
+//}
+
 func Login(w http.ResponseWriter, r *http.Request) {
 	var userDetails models.UsersLoginDetails
 	decoderErr := utilities.Decoder(r, &userDetails)
